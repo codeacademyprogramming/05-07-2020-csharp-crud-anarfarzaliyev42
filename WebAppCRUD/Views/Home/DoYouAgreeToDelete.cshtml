@@ -1,0 +1,10 @@
+﻿
+@{
+    ViewBag.Title = "DeleteProduct";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model WebAppCRUD.Models.Product
+<h2>Delete Product @Model.Name ?</h2>
+<p>The action cannot be undone.</p>
+@Html.ActionLink("Delete", "DeleteProduct",new {id=Model.Id }, new { @class = "btn btn-danger" })
+@Html.ActionLink("Cancel", "Index", new { area="" }, new { @class = "btn btn-simple" })

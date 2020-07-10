@@ -1,0 +1,14 @@
+﻿
+@{
+    ViewBag.Title = "ShowProductDetails";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model WebAppCRUD.Models.Product
+<h2>@Model.Name</h2>
+<b>Description:</b>
+<div>@Model.Description</div>
+<b>Price:</b>
+<div>@Model.Price</div>
+
+<span><i class="fas fa-long-arrow-alt-left"></i> @Html.ActionLink("Back to product list", "index")</span> 
+

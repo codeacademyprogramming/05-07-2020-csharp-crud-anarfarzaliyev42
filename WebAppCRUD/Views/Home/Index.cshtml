@@ -1,0 +1,49 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.title = "List";
+}
+@using WebAppCRUD.Models;
+@model List<Product>
+
+<div class="add-product-btn">
+
+    <a href="~/Home/AddProduct" class="btn btn-simple"><i class="fas fa-plus"></i>Add product</a>
+
+</div>
+<div class="product-search">
+    <label class="d-block">Product name</label>
+    <input id="product-search-input" />
+</div>
+
+<table class="table">
+    <thead>
+        <tr class="row">
+            <th class=" col-md-1">#</th>
+            <th class=" col-md-2">Name</th>
+            <th class=" col-md-4">Description</th>
+            <th class=" col-md-2 text-center">Price</th>
+            <th class="col-md-3 text-center">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @{
+            int count = 0;
+            foreach (var product in @Model)
+            {
+                count++;
+                <tr class="row">
+                    <td class="col-md-1">@count</td>
+                    <td class="text-left name col-md-2">@Html.ActionLink($"{@product.Name}", "ShowProductDetails", new { id = product.Id })</td>
+                    <td class="text-nowrap text-left col-md-4">@product.Description</td>
+                    <td class="text-nowrap text-left col-md-2 text-center">@product.Price<i class="fas fa-euro-sign"></i></td>
+                    <td class="text-center col-md-3">
+                        @Html.ActionLink("Edit", "EditProduct", new { id = product.Id }, new { @class = "btn-xs btn-warning " })
+                        @Html.ActionLink("Delete", "DoYouAgreeToDelete", new { id = product.Id }, new { @class = "btn-danger btn-xs" })
+
+                    </td>
+                </tr>
+            }
+
+        }
+    </tbody>
+</table>
