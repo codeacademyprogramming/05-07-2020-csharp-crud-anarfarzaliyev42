@@ -137,6 +137,10 @@
     <Compile Include="Migrations\202007081652034_first.Designer.cs">
       <DependentUpon>202007081652034_first.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202007141311419_second.cs" />
+    <Compile Include="Migrations\202007141311419_second.Designer.cs">
+      <DependentUpon>202007141311419_second.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -196,6 +200,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202007081652034_first.resx">
       <DependentUpon>202007081652034_first.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202007141311419_second.resx">
+      <DependentUpon>202007141311419_second.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

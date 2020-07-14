@@ -168,3 +168,4 @@ C:\Users\HP\Source\Repos\05-07-2020-csharp-crud-anarfarzaliyev42\WebAppCRUD\obj\
 C:\Users\HP\Source\Repos\05-07-2020-csharp-crud-anarfarzaliyev42\WebAppCRUD\obj\Debug\WebAppCRUD.csproj.CopyComplete
 C:\Users\HP\Source\Repos\05-07-2020-csharp-crud-anarfarzaliyev42\WebAppCRUD\obj\Debug\WebAppCRUD.dll
 C:\Users\HP\Source\Repos\05-07-2020-csharp-crud-anarfarzaliyev42\WebAppCRUD\obj\Debug\WebAppCRUD.pdb
+C:\Users\HP\Source\Repos\05-07-2020-csharp-crud-anarfarzaliyev42\WebAppCRUD\obj\Debug\WebAppCRUD.Migrations.second.resources

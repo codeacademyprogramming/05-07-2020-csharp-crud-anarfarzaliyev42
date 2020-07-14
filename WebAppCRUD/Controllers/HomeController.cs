@@ -30,12 +30,12 @@ namespace WebAppCRUD.Controllers
             {
                 db.Products.Add(product);
                 db.SaveChanges();
+                return RedirectToAction("Index", "Home");
             }
-            else
-            {
-                return new HttpStatusCodeResult(400);
-            }
-            return RedirectToAction("Index","Home");
+           
+            return new HttpStatusCodeResult(400);
+            
+            
         }
         [HttpPost]
         public ActionResult EditProduct(Product product)
@@ -51,9 +51,11 @@ namespace WebAppCRUD.Controllers
                 db.ChangeTracker.Entries().Where(e => e.Entity != null).ToList().ForEach(e => e.State = EntityState.Detached);
                 db.Entry(product).State = EntityState.Modified;
                 db.SaveChanges();
+                return RedirectToAction("Index", "Home");
             }
-              
-            return RedirectToAction("Index", "Home");
+
+             return new HttpStatusCodeResult(400);
+
         }
      
         public ActionResult EditProduct(int id)
